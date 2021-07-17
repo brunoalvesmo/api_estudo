@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\NoticesController;
 use App\Http\Controllers\API\AuthorController;
+use App\Http\Controllers\API\BookController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 

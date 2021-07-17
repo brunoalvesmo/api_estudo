@@ -14,7 +14,7 @@ class BookController extends BaseApiController
             $model,
             [
                 'title' => 'required',
-                'descripition' => 'required',
+                'description' => 'required',
                 'active' => 'required'
             ]
         );

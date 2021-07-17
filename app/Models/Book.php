@@ -18,4 +18,4 @@ class Book extends Model
         'active' => 'bool'
     ];
 }
-}
+
