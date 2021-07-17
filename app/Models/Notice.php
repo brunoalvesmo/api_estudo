@@ -13,4 +13,8 @@ class Notice extends Model
         'body',
         'active'
     ];
+
+    protected $casts = [
+        'active' => 'bool'
+    ];
 }
