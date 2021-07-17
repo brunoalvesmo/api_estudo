@@ -4,17 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Notice extends Model
+class Book extends Model
 {
-    protected $table = "notices";
+    protected $table = "books";
 
     protected $fillable = [
         'title',
-        'body',
+        'description',
         'active'
     ];
 
     protected $casts = [
         'active' => 'bool'
     ];
+}
 }

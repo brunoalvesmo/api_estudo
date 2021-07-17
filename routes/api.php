@@ -30,5 +30,10 @@ Route::get('/author', [AuthorController::class, "index"])->name('author.index');
 Route::get('/author/{id}', [AuthorController::class, "show"])->name('author.show')->where('id', '[0-9]+');
 Route::post('/author', [AuthorController::class, "store"])->name('author.store');
 Route::put('/author/{id}', [AuthorController::class, "update"])->name('author.update')->where('id', '[0-9]+');
-Route::delete('/author/{id}', [AuthorController::class, "delete"])->name('.authordelete')->where('id', '[0-9]+');
+Route::delete('/author/{id}', [AuthorController::class, "delete"])->name('author.delete')->where('id', '[0-9]+');
 
+Route::get('/book', [BookController::class, "index"])->name('book.index');
+Route::get('/book/{id}', [BookController::class, "show"])->name('book.show')->where('id', '[0-9]+');
+Route::post('/book', [BookController::class, "store"])->name('book.store');
+Route::put('/book/{id}', [BookController::class, "update"])->name('book.update')->where('id', '[0-9]+');
+Route::delete('/book/{id}', [BookController::class, "delete"])->name('book.delete')->where('id', '[0-9]+');
