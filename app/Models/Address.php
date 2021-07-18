@@ -17,6 +17,6 @@ class Address extends Model
     public function people()
     {
         //     $this->belongsTo(relação, chave estrangeira local, primary key da relação);
-        return $this->belongsTo(App\Models\Person::class, 'person_id', 'id');
+        return $this->belongsTo(Person::class, 'person_id', 'id');
     }
 }

@@ -43,9 +43,11 @@ Route::delete('/book/{id}', [BookController::class, "delete"])->name('book.delet
 
 Route::get('/person', [PersonController::class, "index"])->name('person.index');
 Route::get('/person/{id}', [PersonController::class, "show"])->name('person.show')->where('id', '[0-9]+');
+Route::get('/person/{id}/address', [PersonController::class, "showAddress"])->name('person.showAddress')->where('id', '[0-9]+');
 Route::post('/person', [PersonController::class, "store"])->name('person.store');
 Route::put('/person/{id}', [PersonController::class, "update"])->name('person.update')->where('id', '[0-9]+');
 Route::delete('/person/{id}', [PersonController::class, "delete"])->name('person.delete')->where('id', '[0-9]+');
+Route::post('/person/{id}/address', [PersonController::class, "personAddOrUpdateAddress"])->name('personAddOrUpdateAddress')->where('id', '[0-9]+');
 
 Route::get('/address', [AddressController::class, "index"])->name('address.index');
 Route::get('/address/{id}', [AddressController::class, "show"])->name('address.show')->where('id', '[0-9]+');

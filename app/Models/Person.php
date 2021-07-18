@@ -19,6 +19,6 @@ class Person extends Model
     public function address()
     {
         //     $this->hasOne(relacao, chave estrangeira, primary key);
-        return $this->hasOne(App\Models\Address::class, 'person_id', 'id');
+        return $this->hasOne(Address::class, 'person_id', 'id');
     }
 }

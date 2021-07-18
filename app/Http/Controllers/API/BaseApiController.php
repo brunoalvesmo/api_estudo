@@ -20,11 +20,11 @@ abstract class BaseApiController extends BaseController
         $this->errors = $errors;
     }
 
-    protected function validation(): stdClass 
+    protected function validation(array $errors = array()): stdClass 
     {
         $validator = Validator::make(
             request()->all(), 
-            $this->errors
+            count($errors) === 0 ? $this->errors: $errors
         );
         $data = new stdClass;
         $data->fails = $validator->fails();
