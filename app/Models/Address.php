@@ -14,7 +14,7 @@ class Address extends Model
         'street', 'number', 'person_id'
     ];
 
-    public function people()
+    public function person()
     {
         //     $this->belongsTo(relação, chave estrangeira local, primary key da relação);
         return $this->belongsTo(Person::class, 'person_id', 'id');
