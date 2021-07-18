@@ -55,4 +55,14 @@ class PersonController extends BaseApiController
         }
         return $this->notFound();
     }
+
+    public function showPerson($id) 
+    {
+        $model = $this->model->find($id);
+        if ($model) {
+            $model->load('phones');
+            return $this->ok($model);
+        }
+        return $this->notFound();
+    }
 }

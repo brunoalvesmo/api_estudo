@@ -21,4 +21,10 @@ class Person extends Model
         //     $this->hasOne(relacao, chave estrangeira, primary key);
         return $this->hasOne(Address::class, 'person_id', 'id');
     }
+
+    public function phones()
+    {
+        //     $this->hasMany(relação, chave estrangeira da relação, primary key local);
+        return $this->hasMany(Phone::class, 'person_id', 'id');
+    }
 }
