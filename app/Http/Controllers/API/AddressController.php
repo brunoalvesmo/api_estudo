@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
-use App\App\Models\Address;
+use App\Models\Address;
 
 class AddressController extends BaseApiController
 {
